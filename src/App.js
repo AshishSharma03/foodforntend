@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import HeroSection from './Components/Sections/HeroSection'
+import { Box, Container, Grid, Stack, Typography ,Button} from '@mui/material'
+import AboutUs from './Components/Sections/AboutUs'
+import ArticalSection from './Components/Sections/ArticalSection'
+import FooterSection from './Components/Sections/FooterSection'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <Stack gap={{md:"185px",sx:"20px",xs:"20px"}}>
+      <HeroSection />
+      <AboutUs/>
+      <ArticalSection/>
+      </Stack>
+      <FooterSection/>
+    </main>
+  )
 }
 
-export default App;
+export default App
